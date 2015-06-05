@@ -1,0 +1,84 @@
+<!-- 05/16/2015 -- Christophe Maso -->
+<!DOCTYPE HTML>
+<html lang="en" ng-app="tonesApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Peloton JS Task</title>
+
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono">
+
+ 		<script src="js/prefixfree.min.js"></script>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/tones.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+
+	<body ng-controller="TonesCtrl">
+		<input type="button" value="Return to Portfolio" class="returnBtn">
+		<div id="container">
+			<div id="instructionsDiv">
+				Choose up to 9 numbers from the pad below to see all of the possible non-repeating combinations of their letters. Use the select to choose the number of letters per combination (defaults to 3). 
+			</div>
+
+			<div id="rSelectDiv">
+				<select name="r" id="r">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</div>
+
+			<div id="numDisplayDiv">You have selected: <span id="numDisplaySpan"></span></div>
+
+			<div>
+			    <a class="button" ng-click="player.playTone(1)">
+			        <div class="btnText" id="1">1</div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(2)">
+			        <div class="btnText">2<div class="alphaSmall">ABC</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(3)">
+			        <div class="btnText">3<div class="alphaSmall">DEF</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(4)">
+			        <div class="btnText">4<div class="alphaSmall">GHI</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(5)">
+			        <div class="btnText">5<div class="alphaSmall">JKL</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(6)">
+			        <div class="btnText">6<div class="alphaSmall">MNO</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(7)">
+			        <div class="btnText">7<div class="alphaSmall">PQRS</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(8)">
+			        <div class="btnText" >8<div class="alphaSmall">TUV</div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(9)">
+			        <div class="btnText">9<div class="alphaSmall">WXYZ</div></div>
+			    </a>
+			    <a class="button">
+			        <div class="btnText" id="reset"><div class="entypo-ccw"></div></div>
+			    </a>
+			    <a class="button" ng-click="player.playTone(0)">
+			        <div class="btnText" id="0">0</div>
+			    </a>
+			    <a class="button">
+			        <div class="btnText" id="enter"><div class="entypo-check"></div></div>
+			    </a>
+			</div>
+			<br class="clear" />
+			<div id="showCombosDiv">(Note - Choosing keys 2-9 and anything higher than 5 letters per combo may be tough on your browser...)</div>
+		</div>
+	</body>
+</html>
